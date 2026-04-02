@@ -29,9 +29,9 @@ export default function Navbar() {
             Blog
           </Link>
 
-          <a href="#contact" className="hover:text-green-400 border-b-2 border-transparent hover:border-green-400 transition">
+          <Link to="/contact" className="hover:text-green-400 border-b-2 border-transparent hover:border-green-400 transition">
             Contact
-          </a>
+          </Link>
           </div>
       </div>
     </nav>

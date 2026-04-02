@@ -6,6 +6,7 @@ import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetails";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
+import Contact from "./pages/contact.jsx";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogDetail />} />
+          <Route path="/contact" element={<Contact />} />
 
           {/*ADMIN ROUTES */}
           <Route path="/admin/login" element={<AdminLogin />} />
