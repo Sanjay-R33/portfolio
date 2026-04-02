@@ -3,6 +3,8 @@ import { getProjects } from "../services/projectService";
 import { getSkills } from "../services/skillService";
 import { Link } from "react-router-dom";
 
+import Navbar from "../components/Navbar";
+
 export default function Home() {
   const [projects, setProjects] = useState([]);
   const [skills, setSkills] = useState([]);
@@ -13,6 +15,8 @@ export default function Home() {
   }, []);
 
   return (
+    <>
+    <Navbar />
     <div className="bg-black text-white min-h-screen">
 
       {/* HERO */}
@@ -37,8 +41,9 @@ export default function Home() {
 
       </section>
           {/* SKILLS */}
-      <section className="px-6 py-16">
+      <section id="skills" className="px-6 py-16">
         <h2 className="text-3xl mb-6">Skills</h2>
+        
 
         <div className="grid md:grid-cols-2 gap-4">
           {skills.map(skill => (
@@ -51,6 +56,7 @@ export default function Home() {
                   style={{ width: `${skill.level}%` }}
                 />
               </div>
+              {skill.level}%
             </div>
           ))}
         </div>
@@ -119,5 +125,6 @@ export default function Home() {
       </section>
 
     </div>
+  </>
   );
 }
