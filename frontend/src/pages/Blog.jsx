@@ -10,7 +10,7 @@ export default function Blog() {
   }, []);
 
   return (
-    <div className="p-6 text-white">
+    <div className="p-6 min-h-screen bg-black text-white">
       <h1 className="text-3xl font-bold mb-6">Blog</h1>
 
       {blogs.map(blog => (
